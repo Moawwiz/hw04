@@ -25,7 +25,7 @@
 }
 
 \title{Habib University\\CS-113 Discrete Mathematics\\Spring 2018\\HW 4}
-\author{$<your ID>$}  % replace with your ID, e.g. oy02945
+\author{$<Mo'awwiz Arshad Shaheen>$}  % replace with your ID, e.g. oy02945
 \date{Due: 19h, 16th March, 2018}
 
 
@@ -41,7 +41,9 @@
   \part Prove that $1 = -1 \rightarrow 2 = 1$
   
   \begin{solution}
-    % Write your solution here
+   If premise of an implication is false then it does not matter what value the conclusion holds. The statement will always be true.
+   
+   Since $1 = -1 $ is False. Then the implication is True. 
   \end{solution}
   
   \part Let $a,b \in \mathbb{N}$. What's wrong with the following proof:
@@ -54,7 +56,7 @@
   a &= 0
   \end{align*}
   \begin{solution}
-    % Write your solution here
+    If $a=b$ then $(a-b)=0$. In step $5$ both sides are being divided by zero. Division by zero is undefined hence the proof can not be carried further.  
   \end{solution}
 
   \part What's wrong with the following proof that shows $2^n = 1, n = \{0,1,2,...\}$, using strong induction on $n$:
@@ -72,6 +74,14 @@
 
   \begin{solution}
     % Write your solution here
+    The following conditions should hold for strong induction:
+    \begin{parts}
+    \part The base step should hold.
+    \part The inductive step shoud hold for for all positive integers $k$ in the conditional statement $[P(0)\wedge P(1)\wedge ... \wedge P(k)]\rightarrow P(k+1)$.
+    \end{parts}
+    The flaw is present in the inductive step. In the question it is assumed that $k \geq 1$ in order for the exponent in the denominator to be a nonnegative integer which is not possible for $0 \leq n \leq k$. If that were the case the inductive hypothesis could not be applied. 
+    
+    The base case was checked for $n=0$, so it can not be assumed that $k\geq 1$ when trying to prove for $k+1$ in the inductive step because at $n=1$ the proposition breaks down and does not hold. Hence, the proof is invalid. 
   \end{solution}
 \end{parts}
 
@@ -99,11 +109,65 @@ You are given a set of 9 global challenges - to which you may add one more of yo
 \end{parts}
 
 (You may refer to the \textbf{Appendix} for a list of definitions)
-
-
-  \begin{solution}
-    % Write your solution here
+\begin{solution}
+    
+    let X = $\{a,b,c,d,e,f,g,h,i,j\}$, letting each element $\in X$ represent a challenge respectively. $j$ being the challenge added by the student.\\
+    \begin{parts}
+    
+ 
+    \part
+    $\mathcal{P} = (X, NB)\\ NB=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(g,g),(h,h),(i,i),(j,j)\\,(a,b),(c,d),(e,f),(g,h),(i,j)\}$ \\
+    \part
+    $\mathcal{P} = (X, NB) \\\ NB = \{(a,a),(b,b),(c,c), (a,b),(b,c),(a,c),
+    (d,d),(e,e),(d,e)
+    (f,f),(g,g),(f,g)
+    (h,h),(i,i)\\,(j,j),(h,i),(i,j),(h,j)\}$\\
+    $C_1 = \{a,b,c\}, C_2 = \{d,e\}, C_3 = \{f,g\}, C_4 = \{h,i,j\}$ \\
+    \part
+     $\mathcal{P} = (X, NB)\\ NB=\{(a,a),(b,b),(c,c),(d,d),(e,e),(f,f),(g,g),(h,h),(i,i),(j,j),\\ 
+     (j,a),(j,b),(j,c),(j,d),(j,e),(j,f),(j,g),(j,h),(j,i) \\
+     (b,a),(c,a),(d,a),(e,a),(f,a),(g,a),(h,a),(i,a)\\ 
+     (i,h),(h,g),(g,f),(f,e),(e,d),(d,c),(c,b)\} $ \\
+     \newpage
+    \part
+   $ \mathcal{P} = (X, NB)$
+    \[
+  NB=
+  \left[ {\begin{array}{cccccccccc}
+   1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+  \end{array} } \right]
+\]
+    \part
+    $\mathcal{P} = (X, NS)$
+    \[
+  NS=
+  \left[ {\begin{array}{cccccccccc}
+   1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & 1\\
+   0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1\\
+  \end{array} } \right]
+\]
+    \end{parts}
+    
   \end{solution}
+
+
   
 \question 
 A poset $(R, \preccurlyeq)$ is \textbf{well-founded} if there is no infinite decreasing sequence of elements in the poset, i.e. elements $x_1, x_2, \cdots, x_n$ such that $\cdots \prec x_n \prec \cdots  \prec x_2 \prec x_1$. A poset $(R, \preccurlyeq)$ is \textbf{dense} if for all $x \in S$ and $y \in S$ with $x \prec y$, there is an element $z \in R$ such that $x \prec z \prec y$.
@@ -112,18 +176,52 @@ Show that the set of strings of lowercase English letters with lexicographic ord
 
 
   \begin{solution}
-    % Write your solution here
+    Supposing the chain of string of lowercase English letters to be:
+    \begin{center}
+     $... aaaaab \preccurlyeq aaab \preccurlyeq aab \preccurlyeq ab$
+    \end{center}
+ 
+    This serves as a counter example proving that it is not well-founded since it is infinite and decreasing.\newline
+    Furthermore, it is also is not dense  i.e. there is no string between $a$ and $aa$.
   \end{solution}
 
 \question
      Let $S$ and $T$ be two partial orders on a set $A$. Define a new relation $R$ on $A$ by $(x,y)\in R$ iff both $(x,y) \in S$ and $(x,y) \in T$. Prove that $R$ is a partial order on $A$.
 
     
-      \begin{solution}
-    % Write your solution here
-  \end{solution}
+     \begin{solution}
+     For $R$ to be a partial order on set $A$ it has to be reflexive, anti-symmetric, and transitive.
+     
+     In our case, $S \cap T = R$
+     \begin{parts}
+     \part \textbf{Reflexive:}
+     
+     Every pair of the form $(a,a)$ will be present in $S$ and $T$ both because they are reflexive.
+     
+     And for every pair of the form $(a,a)\in S$ and $(a,a)\in T$ the pair will be present in $R$.
+     
+     Since all pairs of the form $(a,a) \in R$ hence $R$ is reflexive.
+     
+     \part \textbf{Symmetric:}
+     
+     For all pairs of the form $(a,b)$ present in $S$ and $T$, all corresponding pairs of form $(b,a)$ will be not present in $S$ and $T$ because they are antisymmetric.
+     
+     And for all pairs of the form $(a,b)$ present in $S$ and $T$, and their corresponding pairs of form $(b,a)$ will not be present in $R$. 
+     
+     Since all pairs of form $(a,b)$ contained in $R$ will not have a corresponding pair of the form $(b,a)$, $R$ will be antisymmetric. 
+     
+     \part \textbf{Transitive:}
+     
+     All pairs of the form $(a,b)$ and $(b,c)$ in $S$ and $T$ means a pair of form $(a,c)$ will also exist in both.
+     
+     Since $S \cap T = R$ therefore, for every all pairs of form  $(a,b)$ and $(b,c)$ in $S$ and $T$ will be present in $R$. And for each of the pairs a pair of form $(a,c)$ will also be present making $R$ transitive.
+     
+      If we don't have the pairs of form $(a, b)$ and $(b,c)$ in any one of relation $S$ or $T$ or $R$, the antisymmetry will be proved automatically.
+     
+     \end{parts}
+     \end{solution}
 
-\question Your overly-attached girlfriend / boyfriend has concocted a cruel game to keep you around forever. The game involves piles of excuses - each pile twice as high as the last - of all the times you didn't hang out with them. Stacked in increasing order, the piles look truly endless! 
+\question Your overly-attached girlfriend / boyfriend has concocted a cruel gae to keep you around forever. The game involves piles of excuses - each pile twice as high as the last - of all the times you didn't hang out with them. Stacked in increasing order, the piles look truly endless! 
 
 \begin{figure}[ht]
   \centering
@@ -134,6 +232,16 @@ Show that the set of strings of lowercase English letters with lexicographic ord
 
 The game of \textbf{Gazillion Excuses} is a turn based 2-player game such that at each turn, a player removes a non-zero number of excuses from one of the piles. The player who removes the last excuse wins. Your partner thinks that a sufficiently large number of piles (think gazillion) would keep you playing forever. Little do they suspect that a Discrete Mathematician like yourself has formidable proof skills! Given that you are allowed to go first, \textbf{prove using induction} that you will always win the game of Gazillion Excuses. 
 
+
+\begin{solution}
+
+For 
+$a \oplus b$
+  \end{solution}
+
+
+
+\newpage
 \appendix
 
 \section{Appendix}
